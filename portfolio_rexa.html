@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rexa Apriliandy | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0a192f', // Deep navy background
+                            800: '#112240', // Slightly lighter navy for cards
+                            700: '#233554', // Hover states
+                        },
+                        gold: {
+                            400: '#F6AE2D', // Bright gold for hover
+                            500: '#D4AF37', // Classic gold for primary accents
+                            600: '#B8860B', // Darker gold
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar for a premium feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a192f; }
+        ::-webkit-scrollbar-thumb { background: #233554; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+        
+        .glass-nav {
+            background: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-slate-300 font-sans antialiased selection:bg-gold-500 selection:text-navy-900 leading-relaxed">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-heading text-2xl font-bold text-white tracking-wider">
+                        REX<span class="text-gold-500">A.</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="text-slate-300 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                        <a href="#experience" class="text-slate-300 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors">Experience</a>
+                        <a href="#projects" class="text-slate-300 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors">Projects</a>
+                        <a href="#skills" class="text-slate-300 hover:text-gold-400 px-3 py-2 text-sm font-medium transition-colors">Skills</a>
+                        <a href="#contact" class="border border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-navy-900 px-5 py-2 rounded-md text-sm font-medium transition-all duration-300">Contact Me</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-gold-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800 absolute w-full border-b border-gold-500/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block text-slate-300 hover:text-gold-400 px-3 py-2 text-base font-medium">About</a>
+                <a href="#experience" class="block text-slate-300 hover:text-gold-400 px-3 py-2 text-base font-medium">Experience</a>
+                <a href="#projects" class="block text-slate-300 hover:text-gold-400 px-3 py-2 text-base font-medium">Projects</a>
+                <a href="#skills" class="block text-slate-300 hover:text-gold-400 px-3 py-2 text-base font-medium">Skills</a>
+                <a href="#contact" class="block text-gold-500 font-medium px-3 py-2 text-base">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="min-h-screen flex items-center pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative overflow-hidden">
+        <!-- Decorative Background Element -->
+        <div class="absolute top-1/4 right-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-10 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+        <div class="w-full z-10">
+            <p class="text-gold-500 font-medium tracking-wide mb-4 animate-fade-in-up">Halo, nama saya</p>
+            <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-2 tracking-tight">
+                Rexa Apriliandy O. R.
+            </h1>
+            <h2 class="font-heading text-4xl md:text-6xl font-bold text-slate-400 mb-6 leading-tight">
+                Mengubah Ide Kompleks <br class="hidden md:block"> Menjadi Solusi Digital Elegan.
+            </h2>
+            <p class="mt-4 max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed">
+                Mahasiswa Teknik Informatika yang inovatif dengan perpaduan unik pengalaman operasional industri selama 4 tahun dan keahlian di bidang 
+                <span class="text-gold-400 font-medium">Frontend & Backend Development</span>. Berdedikasi membangun aplikasi yang fungsional, andal, dan user-friendly.
+            </p>
+            <div class="flex flex-wrap gap-4">
+                <a href="#projects" class="bg-gold-500 text-navy-900 px-8 py-4 rounded-md font-semibold hover:bg-gold-400 hover:-translate-y-1 transition-all duration-300 shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+                    Lihat Portofolio
+                </a>
+                <a href="#contact" class="border border-slate-400 text-slate-300 px-8 py-4 rounded-md font-semibold hover:border-gold-500 hover:text-gold-500 hover:-translate-y-1 transition-all duration-300">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex items-center mb-12">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white whitespace-nowrap">
+                <span class="text-gold-500 mr-2">01.</span> About Me
+            </h2>
+            <div class="h-px bg-slate-700 w-full md:w-64 ml-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg text-slate-400 leading-relaxed">
+            <div>
+                <p class="mb-4">
+                    Saya adalah Mahasiswa Teknik Informatika di <span class="text-gold-400">Universitas Komputer Indonesia (UNIKOM)</span> dengan ketertarikan kuat dalam pengembangan web dan aplikasi Android. Perjalanan karir saya cukup unik; selama 4 tahun terakhir, saya menyeimbangkan studi saya dengan bekerja di Perusahaan Farmasi sebagai bagian dari operasional mesin packaging produk.
+                </p>
+                <p class="mb-4">
+                    Pengalaman industri tersebut melatih kedisiplinan, manajemen waktu, dan problem-solving saya secara nyata, yang kini saya aplikasikan ke dalam dunia <i>software engineering</i>. Saya terbiasa mengembangkan fitur, mengelola database (terutama dengan <span class="text-gold-400">Laravel PHP framework</span>), serta melakukan integrasi layanan dan pengujian aplikasi.
+                </p>
+                <p>
+                    Saya juga memiliki kemampuan komunikasi yang baik dan kecakapan Bahasa Inggris (TOEFL 520) khususnya pada <i>listening</i> dan <i>reading</i>, yang sangat membantu dalam memahami dokumentasi teknis standar global.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Education Card -->
+                <div class="bg-navy-800 p-6 rounded-lg border border-navy-700 hover:border-gold-500/50 transition-colors">
+                    <h3 class="text-white font-semibold text-xl mb-4"><i class="fas fa-graduation-cap text-gold-500 mr-2"></i> Latar Belakang Pendidikan</h3>
+                    <div class="mb-4 relative pl-6 border-l-2 border-gold-500/30">
+                        <div class="absolute w-3 h-3 bg-gold-500 rounded-full -left-[7px] top-1.5"></div>
+                        <h4 class="text-white font-medium">Universitas Komputer Indonesia (UNIKOM)</h4>
+                        <p class="text-sm text-gold-400">Teknik Informatika (Target Lulus: 2026)</p>
+                        <p class="text-sm mt-1">IPK: <span class="font-bold text-white">3.88</span> | Bandung, Indonesia</p>
+                    </div>
+                    <div class="relative pl-6 border-l-2 border-gold-500/30 border-transparent">
+                        <div class="absolute w-3 h-3 bg-slate-600 rounded-full -left-[7px] top-1.5"></div>
+                        <h4 class="text-white font-medium">SMK Negeri 5 Bandung</h4>
+                        <p class="text-sm text-slate-400">Teknik Komputer Jaringan (Lulus: 2019)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-navy-900">
+        <div class="flex items-center mb-12">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white whitespace-nowrap">
+                <span class="text-gold-500 mr-2">02.</span> Experience & Projects
+            </h2>
+            <div class="h-px bg-slate-700 w-full ml-6"></div>
+        </div>
+
+        <!-- Working Experience -->
+        <div class="mb-16">
+            <h3 class="text-2xl font-bold text-slate-200 mb-6 flex items-center">
+                <i class="fas fa-briefcase text-gold-500 mr-3"></i> Professional Experience
+            </h3>
+            <div class="space-y-8 pl-4 md:pl-8 border-l border-navy-700">
+                <div class="relative">
+                    <div class="absolute w-4 h-4 bg-gold-500 rounded-full -left-[24px] md:-left-[40px] top-1"></div>
+                    <h4 class="text-xl font-bold text-white">Web & Android Developer <span class="text-gold-500">@ Proyek Akademik & Personal</span></h4>
+                    <p class="text-sm text-slate-400 mb-4">Terlibat dalam seluruh siklus SDLC</p>
+                    <ul class="list-disc pl-4 space-y-2 text-slate-400">
+                        <li>Mengembangkan aplikasi berbasis web dan Android sesuai kebutuhan dan rancangan sistem.</li>
+                        <li>Mengembangkan fitur aplikasi serta mengintegrasikan database, autentikasi, dan layanan API.</li>
+                        <li>Melakukan pengujian, debugging, dan perbaikan untuk memastikan fitur berjalan dengan baik.</li>
+                    </ul>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[24px] md:-left-[40px] top-1"></div>
+                    <h4 class="text-xl font-bold text-white">Operator Mesin Packaging <span class="text-gold-500">@ Perusahaan Farmasi</span></h4>
+                    <p class="text-sm text-slate-400 mb-4">4 Tahun Terakhir</p>
+                    <ul class="list-disc pl-4 space-y-2 text-slate-400">
+                        <li>Bertanggung jawab atas operasional mesin packaging produk farmasi secara presisi dan efisien.</li>
+                        <li>Memastikan kelancaran proses produksi dan meminimalisir error dalam skala industri.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Project -->
+        <h3 class="text-2xl font-bold text-slate-200 mb-6 flex items-center">
+            <i class="fas fa-code text-gold-500 mr-3"></i> Featured Projects
+        </h3>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            
+            <!-- Project 1 (Outdoor Hub) -->
+            <div class="bg-navy-800 rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-navy-700 hover:border-gold-500/50 flex flex-col h-full">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="fas fa-folder-open text-4xl text-gold-500"></i>
+                        <a href="https://sasafoot.itch.io/outdoor-hub" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-gold-500 transition-colors">
+                            <i class="fas fa-external-link-alt text-xl"></i>
+                        </a>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3 group-hover:text-gold-400 transition-colors">Outdoor Hub (Skripsi)</h4>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        Proyek skripsi dan website internal manajemen penyewaan peralatan. Mengelola data inventaris, informasi ketersediaan, hingga alur persetujuan pengajuan penyewaan oleh pihak berwenang secara efisien.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-mono bg-navy-900 text-gold-400 px-3 py-1 rounded-full border border-gold-500/30">PHP</span>
+                        <span class="text-xs font-mono bg-navy-900 text-gold-400 px-3 py-1 rounded-full border border-gold-500/30">Laravel</span>
+                        <span class="text-xs font-mono bg-navy-900 text-gold-400 px-3 py-1 rounded-full border border-gold-500/30">MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 (Machine Learning & Data) -->
+            <div class="bg-navy-800 rounded-xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 border border-navy-700 hover:border-gold-500/50 flex flex-col h-full">
+                <div class="p-8 flex-grow">
+                    <div class="flex justify-between items-center mb-4">
+                        <i class="fas fa-network-wired text-4xl text-gold-500"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-white mb-3 group-hover:text-gold-400 transition-colors">Machine Learning & Data Viz</h4>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        Portofolio analitik dan AI yang mencakup: Prediksi Foto Kendaraan, Prediksi Bentuk Suit, Analisis Crash Dataset G-Colab, dan Visualisasi Dashboard Dataset interaktif.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="text-xs font-mono bg-navy-900 text-gold-400 px-3 py-1 rounded-full border border-gold-500/30">Python</span>
+                        <span class="text-xs font-mono bg-navy-900 text-gold-400 px-3 py-1 rounded-full border border-gold-500/30">Machine Learning</span>
+                        <span class="text-xs font-mono bg-navy-900 text-gold-400 px-3 py-1 rounded-full border border-gold-500/30">Google Colab</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Other Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project Card -->
+            <div class="bg-navy-800/50 p-6 rounded-lg border border-navy-700 hover:border-gold-500/30 transition-all hover:-translate-y-1">
+                <h4 class="text-lg font-bold text-white mb-2">Suwe Ora Jamu Apps</h4>
+                <p class="text-sm text-slate-400 mb-4">Aplikasi pemesanan dan katalog jamu tradisional.</p>
+                <div class="text-xs font-mono text-gold-500">Kotlin / Android</div>
+            </div>
+            <div class="bg-navy-800/50 p-6 rounded-lg border border-navy-700 hover:border-gold-500/30 transition-all hover:-translate-y-1">
+                <h4 class="text-lg font-bold text-white mb-2">Dwikappa Storage System</h4>
+                <p class="text-sm text-slate-400 mb-4">Sistem informasi manajemen gudang dan penyimpanan.</p>
+                <div class="text-xs font-mono text-gold-500">PHP / Web</div>
+            </div>
+            <div class="bg-navy-800/50 p-6 rounded-lg border border-navy-700 hover:border-gold-500/30 transition-all hover:-translate-y-1">
+                <h4 class="text-lg font-bold text-white mb-2">Pojokuliner</h4>
+                <p class="text-sm text-slate-400 mb-4">Platform direktori dan rekomendasi kuliner lokal.</p>
+                <div class="text-xs font-mono text-gold-500">Web Development</div>
+            </div>
+            <div class="bg-navy-800/50 p-6 rounded-lg border border-navy-700 hover:border-gold-500/30 transition-all hover:-translate-y-1">
+                <h4 class="text-lg font-bold text-white mb-2">MyApps Biodata</h4>
+                <p class="text-sm text-slate-400 mb-4">Aplikasi manajemen portofolio dan profil digital.</p>
+                <div class="text-xs font-mono text-gold-500">Kotlin / Android</div>
+            </div>
+            <div class="bg-navy-800/50 p-6 rounded-lg border border-navy-700 hover:border-gold-500/30 transition-all hover:-translate-y-1">
+                <h4 class="text-lg font-bold text-white mb-2">BelajarPython</h4>
+                <p class="text-sm text-slate-400 mb-4">Proyek edukasi pembelajaran sintaks dasar Python.</p>
+                <div class="text-xs font-mono text-gold-500">Python</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex items-center mb-12 flex-row-reverse">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white whitespace-nowrap">
+                My Skills <span class="text-gold-500 ml-2">.03</span>
+            </h2>
+            <div class="h-px bg-slate-700 w-full mr-6"></div>
+        </div>
+
+        <div class="bg-navy-800 rounded-2xl p-8 md:p-12 border border-navy-700 shadow-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                
+                <!-- Hard Skills -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-navy-700 pb-2"><i class="fas fa-laptop-code text-gold-500 mr-2"></i> Technical Skills</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">PHP</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">Laravel Framework</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">HTML5</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">CSS3</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">Kotlin (Android)</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">Python</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">Machine Learning</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">MySQL</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-gold-500/30 text-gold-400 rounded-full text-sm font-medium hover:bg-gold-500 hover:text-navy-900 cursor-default transition-colors">API Integration</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills & Languages -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 border-b border-navy-700 pb-2"><i class="fas fa-users text-gold-500 mr-2"></i> General & Languages</h3>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="px-4 py-2 bg-navy-900 border border-slate-600 text-slate-300 rounded-full text-sm font-medium hover:border-gold-500 transition-colors">Problem Solving</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-slate-600 text-slate-300 rounded-full text-sm font-medium hover:border-gold-500 transition-colors">Komunikasi Tim</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-slate-600 text-slate-300 rounded-full text-sm font-medium hover:border-gold-500 transition-colors">Manajemen Waktu</span>
+                        <span class="px-4 py-2 bg-navy-900 border border-slate-600 text-slate-300 rounded-full text-sm font-medium hover:border-gold-500 transition-colors">Disiplin Industri</span>
+                    </div>
+
+                    <div class="bg-navy-900 p-5 rounded-lg border border-gold-500/20">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-white font-semibold"><i class="fas fa-language text-gold-500 mr-2"></i> Bahasa Inggris</h4>
+                            <span class="bg-gold-500 text-navy-900 text-xs font-bold px-2 py-1 rounded">TOEFL: 520</span>
+                        </div>
+                        <p class="text-sm text-slate-400">Kemampuan cukup baik terutama dalam ranah <i>Listening</i> dan <i>Reading</i>. Sangat menunjang dalam riset dan pembacaan dokumentasi pemrograman.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+        <h2 class="text-gold-500 font-mono mb-4 text-lg">04. What's Next?</h2>
+        <h3 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">Get In Touch</h3>
+        <p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
+            Saya selalu terbuka untuk peluang baru, diskusi proyek, atau sekadar bertukar wawasan di bidang teknologi. Apakah Anda memiliki pertanyaan atau tawaran kerja sama? Sapa saya melalui kotak masuk!
+        </p>
+
+        <div class="bg-navy-800 p-8 md:p-10 rounded-2xl border border-navy-700 shadow-2xl text-left max-w-2xl mx-auto">
+            <div class="space-y-6">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center border border-gold-500/30 mr-4">
+                        <i class="fas fa-envelope text-gold-500"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-400">Email</p>
+                        <a href="mailto:aprili.rexa@gmail.com" class="text-white font-medium hover:text-gold-400 transition-colors">aprili.rexa@gmail.com</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center border border-gold-500/30 mr-4">
+                        <i class="fas fa-phone-alt text-gold-500"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-400">Telepon / WhatsApp</p>
+                        <a href="tel:083121092004" class="text-white font-medium hover:text-gold-400 transition-colors">0831 2109 2004</a>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center border border-gold-500/30 mr-4">
+                        <i class="fas fa-map-marker-alt text-gold-500"></i>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-400">Lokasi</p>
+                        <p class="text-white font-medium">Ujungberung Indah Blok 16-12, Bandung</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="mailto:aprili.rexa@gmail.com" class="inline-block bg-transparent border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-navy-900 px-8 py-4 rounded-md font-bold transition-all duration-300">
+                    Kirim Pesan Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 border-t border-navy-800 py-8 text-center text-slate-400">
+        <div class="flex justify-center space-x-6 mb-6">
+            <!-- Placeholder for social links -->
+            <a href="#" class="text-slate-400 hover:text-gold-500 transition-colors text-xl"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-slate-400 hover:text-gold-500 transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-slate-400 hover:text-gold-500 transition-colors text-xl"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="text-sm font-mono">
+            Designed & Built by <span class="text-gold-500">Rexa Apriliandy Octaselena Rustam</span> &copy; 2026
+        </p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
